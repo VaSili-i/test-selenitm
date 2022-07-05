@@ -24,3 +24,9 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      
+    - name: selenium test
+      uses: peaceiris/actions-gh-pages@3
+      with:
+        pablisk_dir: ./src/test/java/com/example/demo/SeleniumTest.java
+      
